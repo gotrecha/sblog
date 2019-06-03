@@ -32,7 +32,7 @@ You probably want the latest tagged version, but the default Git version is the 
     $ venv\Scripts\activate.bat
 ```
 
-###Install Flaskr
+### Install Flaskr
 
 ```
     $ pip install -e .
@@ -46,7 +46,7 @@ installing Flaskr::
 ```
 
 
-##Run
+## Run
 
 ### On Linux or Mac:
 
@@ -69,7 +69,7 @@ installing Flaskr::
 Open http://127.0.0.1:5000 in a browser.
 
 
-##Test
+## Test
 
 ### On Linux, Mac, or Windows using standard pytest:
 
@@ -85,7 +85,7 @@ Open http://127.0.0.1:5000 in a browser.
     $ coverage html  # open htmlcov/index.html in a browser
 ```
 
-##Develop
+## Develop
 1. Switch to the [Issues](https://github.com/gotrecha/sblog/issues/) page in the github UI
 2. Review the [bug report](https://github.com/gotrecha/sblog/issues/1)
 3. Create a new branch called initial-startup-error
