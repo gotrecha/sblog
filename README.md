@@ -13,7 +13,7 @@ you're reading.** You probably want the latest tagged version, but the
 default Git version is the master branch. ::
 
     # clone the repository
-    $ git clone https://github.com/gotrecha/sblog
+    $ git clone git@github.com:gotrecha/sblog.git
     $ cd sblog
 
 Create a virtualenv and activate it::
@@ -42,14 +42,14 @@ Run
 
 ::
 
-    $ export FLASK_APP=flaskr
+    $ export FLASK_APP=sblog
     $ export FLASK_ENV=development
     $ flask init-db
     $ flask run
 
 Or on Windows cmd::
 
-    > set FLASK_APP=flaskr
+    > set FLASK_APP=sblog
     > set FLASK_ENV=development
     > flask init-db
     > flask run
