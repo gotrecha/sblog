@@ -13,7 +13,7 @@ you're reading.** You probably want the latest tagged version, but the
 default Git version is the master branch. ::
 
     # clone the repository
-    $ git clone https://github.com/gotrecha/sblog
+    $ git clone git@github.com:gotrecha/sblog.git
     $ cd sblog
 
 Create a virtualenv and activate it::
