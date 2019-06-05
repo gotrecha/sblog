@@ -80,7 +80,7 @@ Open http://127.0.0.1:5000 in a browser.
 ## Develop
 1. Switch to the [Issues](https://github.com/gotrecha/sblog/issues/) page in the github UI
 2. Select one of the enhancements listed for implementation
-3. Create a new branch called feature-temperature-<your name>, feature-register-<your name>, or feature-comment-<your name> depending on the enhancement selected
+3. Create a new branch called feature-temperature-yourname, feature-register-yourname, or feature-comment-yourname depending on the enhancement selected
 4. Update your working directory to the new branch
 5. Implement the enhancement
 6. Push the changes to the remote branch
