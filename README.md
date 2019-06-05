@@ -79,11 +79,12 @@ Open http://127.0.0.1:5000 in a browser.
 
 ## Develop
 1. Switch to the [Issues](https://github.com/gotrecha/sblog/issues/) page in the github UI
-2. Review the [bug report](https://github.com/gotrecha/sblog/issues/1)
-3. Create a new branch called initial-startup-error
+2. Select one of the enhancements listed for implementation
+3. Create a new branch called feature-temperature-<your name>, feature-register-<your name>, or feature-comment-<your name> depending on the enhancement selected
 4. Update your working directory to the new branch
-5. Implement a fix for the initial startup error
+5. Implement the enhancement
 6. Push the changes to the remote branch
 7. Submit a pull request for review of the bug fix implementation
-8. Return to [Issues](https://github.com/gotrecha/sblog/issues/) page in the github UI
-9. Select two of the enhancements listed and repeat steps 2 thru 7 for the enhancements selected 
+8. Select a second enhancement listed for implementation
+9. Repeat steps 3 - 8
+10. Send an email indicating completion of the homework!
