@@ -37,14 +37,6 @@ You probably want the latest tagged version, but the default Git version is the 
 ```
     $ pip install -e .
 ```
-Or if you are using the master branch, install Flask from source before
-installing Flaskr::
-
-```
-    $ pip install -e ../..
-    $ pip install -e .
-```
-
 
 ## Run
 
