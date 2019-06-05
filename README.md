@@ -13,7 +13,7 @@ You probably want the latest tagged version, but the default Git version is the 
 
 ```
     # clone the repository
-    $ git clone https://github.com/gotrecha/sblog
+    $ git clone git@github.com:gotrecha/sblog.git
     $ cd sblog
 ```
 
@@ -51,7 +51,7 @@ installing Flaskr::
 ### On Linux or Mac:
 
 ```
-    $ export FLASK_APP=flaskr
+    $ export FLASK_APP=sblog
     $ export FLASK_ENV=development
     $ flask init-db
     $ flask run
@@ -60,7 +60,7 @@ installing Flaskr::
 ### On Windows:
 
 ```
-    > set FLASK_APP=flaskr
+    > set FLASK_APP=sblog
     > set FLASK_ENV=development
     > flask init-db
     > flask run
