@@ -95,7 +95,9 @@ def login():
         ).fetchone()
 
         if user is None:
-            error = "Incorrect username."
+            error = "Username not found in the system. Please register for an account."
+            flash(error)
+            return redirect(url_for("auth.register"))
         elif not check_password_hash(user["password"], password):
             error = "Incorrect password."
 
