@@ -11,6 +11,13 @@ bp = Blueprint("blog", __name__)
 def index():
     """Show all the posts, most recent first."""
     db = get_db()
+
+    # redirect user to register page if no users in database per GitHub issue #3
+    c = db.cursor()
+    if c.rowcount < 1:
+        flash("There are no users in the system. Please register for an account.")
+        return redirect(url_for("auth.register"))
+
     posts = db.execute(
         "SELECT p.id, title, body, created, author_id, username"
         " FROM post p JOIN user u ON p.author_id = u.id"
