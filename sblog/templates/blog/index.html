@@ -3,8 +3,58 @@
 {% block header %}
   <h1>{% block title %}Posts{% endblock %}</h1>
   {% if g.user %}
+    <p></p>
+    {% block weather %}<p></p><h2>Temperature Info</h2>
+    Location to get temperature for (default is browser geolocation): 
+    <input type="text" id="city" name="city" value="" /><br />
+    <button onclick="getLocation()">Get temperature</button>
+    <p id="info"></p>
+    <p></p>
+{% endblock %}
     <a class="action" href="{{ url_for('blog.create') }}">New</a>
   {% endif %}
+  <script>
+    var x = document.getElementById("info");
+    function getLocation() {
+      city = document.getElementById("city").value
+      if (city.length == 0) {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      else queryCity(city);
+    
+    function showPosition(position) {
+      city = document.getElementById("city").value
+      if (window.XMLHttpRequest) {
+        req = new XMLHttpRequest();
+      }
+      req.open("GET", "https://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude.toString()
+       + "&lon=" + position.coords.longitude.toString() + "&mode=html&appid=ea4561915508d17b4330eb176f188d0a")
+      
+      req.send();
+
+      req.onreadystatechange = (e) => {
+        x.innerHTML = req.responseText;
+      }
+    }
+
+    function queryCity(city) {
+      if (window.XMLHttpRequest) {
+        req = new XMLHttpRequest();
+      }
+      req.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + city
+       + "&mode=html&appid=ea4561915508d17b4330eb176f188d0a")
+      req.send()
+
+      req.onreadystatechange = (e) => {
+        x.innerHTML = req.responseText
+      }
+    }
+  </script>
+
 {% endblock %}
 
 {% block content %}
